@@ -22,6 +22,11 @@ const h3raw = b.dependency("h3raw", .{ .target = target, .optimize = optimize })
 exe.linkLibrary(h3raw.artifact("h3raw"));
 ```
 
+For complete working examples, see:
+
+- [`example/`](example/)
+- https://github.com/ajfriend/h3raw_example
+
 ## Usage
 
 ```zig
@@ -34,8 +39,6 @@ const location = h3.LatLng{ .lat = lat, .lng = lng };
 var cell: h3.H3Index = undefined;
 _ = h3.latLngToCell(&location, 9, &cell);
 ```
-
-See [`example/`](example/) for a complete working example.
 
 ## API
 
