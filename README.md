@@ -9,7 +9,7 @@ Compiles the H3 C library for use via `@cImport`. No wrapper layer.
 Add to `build.zig.zon`:
 
 ```zig
-.h3 = .{
+.h3raw = .{
     .url = "https://github.com/ajfriend/h3raw/archive/refs/tags/v4.4.1.tar.gz",
     .hash = "...",  // zig build will provide the correct hash
 },
@@ -18,8 +18,8 @@ Add to `build.zig.zon`:
 Link in `build.zig`:
 
 ```zig
-const h3 = b.dependency("h3", .{ .target = target, .optimize = optimize });
-exe.linkLibrary(h3.artifact("h3raw"));
+const h3raw = b.dependency("h3raw", .{ .target = target, .optimize = optimize });
+exe.linkLibrary(h3raw.artifact("h3raw"));
 ```
 
 ## Usage

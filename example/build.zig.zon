@@ -6,12 +6,12 @@
 
     // This example uses a relative path since it's inside the h3raw repo.
     // In your own project, use the URL from the README instead:
-    // .h3 = .{
+    // .h3raw = .{
     //     .url = "https://github.com/ajfriend/h3raw/archive/refs/tags/v4.4.1.tar.gz",
     //     .hash = "...",
     // },
     .dependencies = .{
-        .h3 = .{
+        .h3raw = .{
             .path = "..",
         },
     },

@@ -4,7 +4,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const h3 = b.dependency("h3", .{ .target = target, .optimize = optimize });
+    const h3raw = b.dependency("h3raw", .{ .target = target, .optimize = optimize });
 
     const exe = b.addExecutable(.{
         .name = "h3-example",
@@ -14,7 +14,7 @@ pub fn build(b: *std.Build) void {
             .optimize = optimize,
         }),
     });
-    exe.linkLibrary(h3.artifact("h3raw"));
+    exe.linkLibrary(h3raw.artifact("h3raw"));
     b.installArtifact(exe);
 
     const run = b.step("run", "Run the example");
