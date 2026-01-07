@@ -1,0 +1,19 @@
+zig-cache/
+zig-out/
+.zig-cache/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Claude Code
+.claude/

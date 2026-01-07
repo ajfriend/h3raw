@@ -1,0 +1,24 @@
+.{
+    .name = .h3_example,
+    .version = "0.0.1",
+    .minimum_zig_version = "0.15.0",
+    .fingerprint = 0x4980756efecd193f,
+
+    // This example uses a relative path since it's inside the h3raw repo.
+    // In your own project, use the URL from the README instead:
+    // .h3 = .{
+    //     .url = "https://github.com/ajfriend/h3raw/archive/refs/tags/v4.4.1.tar.gz",
+    //     .hash = "...",
+    // },
+    .dependencies = .{
+        .h3 = .{
+            .path = "..",
+        },
+    },
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "main.zig",
+    },
+}

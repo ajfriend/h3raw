@@ -1,0 +1,21 @@
+.{
+    .name = .h3raw,
+    .version = "4.4.1",
+    .minimum_zig_version = "0.15.0",
+    .fingerprint = 0x680c9e99e4fcfb35,
+
+    .dependencies = .{
+        .h3 = .{
+            .url = "https://github.com/uber/h3/archive/refs/tags/v4.4.1.tar.gz",
+            .hash = "1220f3d22beabe84b373b8adc8b018bc89e173ca07169fe544ae5913527b8e8a3c63",
+        },
+    },
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "LICENSE",
+        "README.md",
+        "DEVELOPERS.md",
+    },
+}
