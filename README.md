@@ -19,7 +19,7 @@ Link in `build.zig`:
 
 ```zig
 const h3 = b.dependency("h3", .{ .target = target, .optimize = optimize });
-exe.linkLibrary(h3.artifact("h3"));
+exe.linkLibrary(h3.artifact("h3raw"));
 ```
 
 ## Usage

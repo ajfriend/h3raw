@@ -9,7 +9,7 @@ pub fn build(b: *std.Build) void {
     generateHeader(b, h3_path) catch return;
 
     const lib = b.addLibrary(.{
-        .name = "h3",
+        .name = "h3raw",
         .root_module = b.createModule(.{
             .target = target,
             .optimize = optimize,

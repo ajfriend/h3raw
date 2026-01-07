@@ -14,7 +14,7 @@ pub fn build(b: *std.Build) void {
             .optimize = optimize,
         }),
     });
-    exe.linkLibrary(h3.artifact("h3"));
+    exe.linkLibrary(h3.artifact("h3raw"));
     b.installArtifact(exe);
 
     const run = b.step("run", "Run the example");
