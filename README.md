@@ -10,7 +10,7 @@ Add to `build.zig.zon`:
 
 ```zig
 .h3raw = .{
-    .url = "https://github.com/ajfriend/h3raw/archive/refs/tags/v4.4.1.tar.gz",
+    .url = "https://github.com/ajfriend/h3raw/archive/refs/tags/v0.2.0.tar.gz",
     .hash = "...",  // zig build will provide the correct hash
 },
 ```

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+None
+
+## v0.2.0
+
 Wraps H3 v4.4.1.
 
 - Expose all internal H3 headers (e.g., `iterators.h`) in addition to the
