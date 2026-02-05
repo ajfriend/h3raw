@@ -26,7 +26,7 @@ pub fn build(b: *std.Build) void {
     lib.installHeadersDirectory(
         h3.path("src/h3lib/include"),
         "",
-        .{ .include_extensions = &.{"h3api.h"} },
+.{},
     );
 
     b.installArtifact(lib);

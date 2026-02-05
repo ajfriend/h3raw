@@ -40,6 +40,24 @@ var cell: h3.H3Index = undefined;
 _ = h3.latLngToCell(&location, 9, &cell);
 ```
 
+## Internal Headers
+
+In addition to the public H3 API, internal headers are also available.
+For example, to use the [iterator functions](https://github.com/uber/h3/blob/master/src/h3lib/include/iterators.h):
+
+```zig
+const h3 = @cImport({
+    @cInclude("h3api.h");
+    @cInclude("iterators.h");
+});
+
+var it = h3.iterInitRes(5);
+while (it.h != h3.H3_NULL) {
+    // do something with it.h
+    h3.iterStepRes(&it);
+}
+```
+
 ## API
 
 Full H3 C API available via `@cImport`. See [H3 docs](https://h3geo.org/docs/api/indexing).
