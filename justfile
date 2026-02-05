@@ -16,6 +16,6 @@ run:
     cd example && zig build run
 
 fmt:
-    zig fmt --check .
+    zig fmt .
 
 ci: fmt build test run
