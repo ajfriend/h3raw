@@ -31,18 +31,22 @@ pub fn build(b: *std.Build) void {
 
     b.installArtifact(lib);
 
-    const tests = b.addTest(.{
-        .root_module = b.createModule(.{
-            .root_source_file = b.path("tests/main.zig"),
-            .target = target,
-            .optimize = optimize,
-        }),
-    });
-    tests.linkLibrary(lib);
-
-    const run_tests = b.addRunArtifact(tests);
     const test_step = b.step("test", "Run library tests");
-    test_step.dependOn(&run_tests.step);
+
+    for ([_][]const u8{
+        "tests/main.zig",
+        "tests/iterators.zig",
+    }) |test_file| {
+        const t = b.addTest(.{
+            .root_module = b.createModule(.{
+                .root_source_file = b.path(test_file),
+                .target = target,
+                .optimize = optimize,
+            }),
+        });
+        t.linkLibrary(lib);
+        test_step.dependOn(&b.addRunArtifact(t).step);
+    }
 }
 
 fn collectCFiles(b: *std.Build, h3: []const u8) ![]const []const u8 {

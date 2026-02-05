@@ -43,6 +43,8 @@ _ = h3.latLngToCell(&location, 9, &cell);
 ## Internal Headers
 
 In addition to the public H3 API, internal headers are also available.
+
+**Warning:** Internal headers are not part of H3's public API. They may change or be removed without notice in any H3 release.
 For example, to use the [iterator functions](https://github.com/uber/h3/blob/master/src/h3lib/include/iterators.h):
 
 ```zig
