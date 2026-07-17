@@ -4,6 +4,10 @@
 
 None
 
+## v0.3.0
+
+Wraps H3 v4.5.0.
+
 ## v0.2.0
 
 Wraps H3 v4.4.1.
